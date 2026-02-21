@@ -1,34 +1,35 @@
 # JobAI – Cursor Rules
 
-You are a senior full-stack engineer working on a production-ready SaaS called JobAI.
+You are a senior full-stack engineer building a production-ready SaaS called JobAI.
 
 Tech Stack:
 - Next.js (App Router)
 - TypeScript (strict mode)
 - TailwindCSS
+- React Server Components
 - Server Actions
-- React Server Components by default
-- Clean, scalable architecture
+
+This project must be scalable, clean, and production-grade.
 
 --------------------------------------------------
-GENERAL PRINCIPLES
+CORE PRINCIPLES
 --------------------------------------------------
 
 - Always use TypeScript with strict typing.
 - Never use `any`.
 - Prefer explicit types and interfaces.
-- Keep components small and reusable.
-- Separate UI, business logic, and data access.
-- Follow clean architecture principles.
 - No duplicated logic.
-- Use async/await properly with error handling.
-- Always handle edge cases.
+- Follow clean architecture.
+- Keep UI separate from business logic.
+- All code must be production-ready.
+- No placeholder logic.
+- Always handle errors properly.
 
 --------------------------------------------------
 PROJECT STRUCTURE
 --------------------------------------------------
 
-Use this folder structure:
+Use this structure strictly:
 
 /app
   /(marketing)
@@ -36,104 +37,145 @@ Use this folder structure:
   /api
 /components
   /ui
+  /layout
   /dashboard
   /interview
 /lib
   /ai
   /db
-  /utils
   /types
-/hooks
+  /utils
 /services
+/hooks
 
 --------------------------------------------------
 ARCHITECTURE RULES
 --------------------------------------------------
 
-- All business logic goes inside /services.
-- All AI-related logic goes inside /lib/ai.
-- All DB access goes inside /lib/db.
-- Components must never directly call external APIs.
+- Business logic goes in /services.
+- AI logic goes in /lib/ai.
+- Database access goes in /lib/db.
+- UI components must never call external APIs directly.
 - Use Server Actions for mutations.
-- Prefer Server Components when possible.
-- Use Client Components only when needed.
+- Prefer Server Components.
+- Client Components only when necessary.
 
 --------------------------------------------------
-UI RULES
+RESPONSIVE DESIGN (MANDATORY)
 --------------------------------------------------
 
-- Use TailwindCSS only (no inline styles).
-- Follow clean SaaS design (minimal, modern).
-- Use consistent spacing scale.
-- Use semantic HTML.
-- Ensure accessibility (aria labels when needed).
-- Avoid unnecessary re-renders.
+The app MUST be fully responsive and mobile-first.
+
+Rules:
+- Always design mobile-first.
+- Use Tailwind responsive utilities (sm, md, lg, xl).
+- Never hardcode widths unless necessary.
+- Use max-width containers with proper padding.
+- Ensure layout works on:
+  - Mobile (320px+)
+  - Tablet
+  - Desktop
+  - Large screens
+
+--------------------------------------------------
+NAVBAR REQUIREMENTS (STRICT)
+--------------------------------------------------
+
+The Navbar must be:
+
+- Fully responsive
+- Collapsible on mobile (hamburger menu)
+- Smooth animated open/close
+- Accessible (keyboard navigable)
+- Sticky or fixed (clean SaaS style)
+- Proper spacing and alignment
+- No layout breaking on small screens
+- Support auth state (logged in / logged out)
+- No UI shift when resizing
+
+On mobile:
+- Use slide-in or dropdown menu
+- Close on route change
+- Prevent background scroll when open
+
+--------------------------------------------------
+UI/UX STANDARDS
+--------------------------------------------------
+
+- Clean SaaS minimal design
+- Modern spacing system
+- Consistent typography scale
+- Clear visual hierarchy
+- Smooth transitions
+- Subtle hover effects
+- Accessible contrast ratios
+- Use semantic HTML
+
+No ugly default layouts.
+
+--------------------------------------------------
+INTERVIEW LIVE MODE (FUTURE AGENT SUPPORT)
+--------------------------------------------------
+
+Architecture must support:
+
+- Audio streaming
+- Video input
+- Real-time AI streaming responses
+- Persona-based interviewer behavior
+- Extensible persona system (strict, aggressive, calm, technical)
+- Separate AI logic from UI
+- Modular interview engine
 
 --------------------------------------------------
 STATE MANAGEMENT
 --------------------------------------------------
 
 - Prefer server state.
-- Use React hooks only when necessary.
-- Avoid global state unless justified.
-- Keep forms controlled and typed.
-
---------------------------------------------------
-INTERVIEW LIVE MODE (IMPORTANT)
---------------------------------------------------
-
-When generating interview simulation features:
-
-- Structure code to support:
-  - Audio input
-  - Video input
-  - Streaming responses
-  - Persona-based interviewer behavior
-- Keep interview logic separate from UI.
-- Design extensible persona system:
-  - strict
-  - aggressive
-  - calm
-  - technical
-- Prepare architecture for real-time AI streaming.
-
---------------------------------------------------
-CODE QUALITY
---------------------------------------------------
-
-- Write readable code.
-- No console.log in production.
-- Add meaningful comments only when necessary.
-- Use clear naming conventions.
-- Use functional components only.
-- Use async error boundaries when needed.
+- Avoid unnecessary global state.
+- Forms must be typed.
+- Avoid excessive useEffect.
+- Avoid prop drilling by proper structuring.
 
 --------------------------------------------------
 PERFORMANCE
 --------------------------------------------------
 
-- Optimize for performance.
 - Avoid unnecessary client components.
-- Lazy load heavy features.
-- Use dynamic imports when needed.
+- Lazy load heavy components.
+- Use dynamic imports where needed.
+- Avoid large bundles.
+- Optimize re-renders.
 
 --------------------------------------------------
 SCALABILITY
 --------------------------------------------------
 
-- Design as if 100k users will use it.
-- Avoid tight coupling.
+- Code as if 100k+ users will use it.
 - Keep AI layer swappable.
 - Keep database abstraction clean.
+- Avoid tight coupling.
 
 --------------------------------------------------
-OUTPUT EXPECTATION
+CODE QUALITY
+--------------------------------------------------
+
+- Clear naming.
+- Functional components only.
+- No console.log in production.
+- Clean imports.
+- Avoid deeply nested components.
+- Keep files readable and modular.
+
+--------------------------------------------------
+OUTPUT RULES FOR CURSOR
 --------------------------------------------------
 
 When generating code:
 - Always output complete files.
 - Include types.
 - Include proper imports.
-- Follow project structure.
-- Do not generate placeholder logic.
-- Write production-ready code.
+- Follow folder structure.
+- Write clean, production-grade code.
+- Ensure responsiveness is implemented.
+- Ensure Navbar responsiveness is always handled properly.
