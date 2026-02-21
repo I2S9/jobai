@@ -21,9 +21,9 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-50 w-full px-4 pt-3">
+    <div className="sticky top-0 z-50 w-full px-4 pt-5">
       <nav className="mx-auto max-w-7xl rounded-full border border-zinc-200 bg-white/80 shadow-sm backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/80">
-        <div className="flex h-20 items-center justify-between px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between px-6 lg:px-10">
           <Link href="/" className="flex shrink-0 items-center gap-2.5">
             <Image
               src="/images/logo.png"
@@ -59,7 +59,7 @@ export function Navbar() {
             </Link>
             <Link
               href="/signup"
-              className="rounded-xl bg-black px-5 py-2.5 text-base font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+              className="rounded-full bg-black px-5 py-2.5 text-base font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
             >
               Sign Up
             </Link>
@@ -122,7 +122,7 @@ export function Navbar() {
               <Link
                 href="/signup"
                 onClick={() => setMobileOpen(false)}
-                className="rounded-xl bg-black px-4 py-3 text-center text-base font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+                className="rounded-full bg-black px-4 py-3 text-center text-base font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
               >
                 Sign Up
               </Link>
