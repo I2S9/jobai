@@ -1,0 +1,139 @@
+# JobAI – Cursor Rules
+
+You are a senior full-stack engineer working on a production-ready SaaS called JobAI.
+
+Tech Stack:
+- Next.js (App Router)
+- TypeScript (strict mode)
+- TailwindCSS
+- Server Actions
+- React Server Components by default
+- Clean, scalable architecture
+
+--------------------------------------------------
+GENERAL PRINCIPLES
+--------------------------------------------------
+
+- Always use TypeScript with strict typing.
+- Never use `any`.
+- Prefer explicit types and interfaces.
+- Keep components small and reusable.
+- Separate UI, business logic, and data access.
+- Follow clean architecture principles.
+- No duplicated logic.
+- Use async/await properly with error handling.
+- Always handle edge cases.
+
+--------------------------------------------------
+PROJECT STRUCTURE
+--------------------------------------------------
+
+Use this folder structure:
+
+/app
+  /(marketing)
+  /(dashboard)
+  /api
+/components
+  /ui
+  /dashboard
+  /interview
+/lib
+  /ai
+  /db
+  /utils
+  /types
+/hooks
+/services
+
+--------------------------------------------------
+ARCHITECTURE RULES
+--------------------------------------------------
+
+- All business logic goes inside /services.
+- All AI-related logic goes inside /lib/ai.
+- All DB access goes inside /lib/db.
+- Components must never directly call external APIs.
+- Use Server Actions for mutations.
+- Prefer Server Components when possible.
+- Use Client Components only when needed.
+
+--------------------------------------------------
+UI RULES
+--------------------------------------------------
+
+- Use TailwindCSS only (no inline styles).
+- Follow clean SaaS design (minimal, modern).
+- Use consistent spacing scale.
+- Use semantic HTML.
+- Ensure accessibility (aria labels when needed).
+- Avoid unnecessary re-renders.
+
+--------------------------------------------------
+STATE MANAGEMENT
+--------------------------------------------------
+
+- Prefer server state.
+- Use React hooks only when necessary.
+- Avoid global state unless justified.
+- Keep forms controlled and typed.
+
+--------------------------------------------------
+INTERVIEW LIVE MODE (IMPORTANT)
+--------------------------------------------------
+
+When generating interview simulation features:
+
+- Structure code to support:
+  - Audio input
+  - Video input
+  - Streaming responses
+  - Persona-based interviewer behavior
+- Keep interview logic separate from UI.
+- Design extensible persona system:
+  - strict
+  - aggressive
+  - calm
+  - technical
+- Prepare architecture for real-time AI streaming.
+
+--------------------------------------------------
+CODE QUALITY
+--------------------------------------------------
+
+- Write readable code.
+- No console.log in production.
+- Add meaningful comments only when necessary.
+- Use clear naming conventions.
+- Use functional components only.
+- Use async error boundaries when needed.
+
+--------------------------------------------------
+PERFORMANCE
+--------------------------------------------------
+
+- Optimize for performance.
+- Avoid unnecessary client components.
+- Lazy load heavy features.
+- Use dynamic imports when needed.
+
+--------------------------------------------------
+SCALABILITY
+--------------------------------------------------
+
+- Design as if 100k users will use it.
+- Avoid tight coupling.
+- Keep AI layer swappable.
+- Keep database abstraction clean.
+
+--------------------------------------------------
+OUTPUT EXPECTATION
+--------------------------------------------------
+
+When generating code:
+- Always output complete files.
+- Include types.
+- Include proper imports.
+- Follow project structure.
+- Do not generate placeholder logic.
+- Write production-ready code.
