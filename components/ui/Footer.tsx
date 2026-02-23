@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-8 sm:flex-row">
           <p className="text-sm text-zinc-500">
-            &copy; {new Date().getFullYear()} JobAi. All rights reserved.
+            &copy; 2026 JobAi. All rights reserved.
           </p>
           <div className="flex gap-5">
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-zinc-500 transition-colors hover:text-white">
