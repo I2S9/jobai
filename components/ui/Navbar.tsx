@@ -23,7 +23,7 @@ export function Navbar() {
   return (
     <div className="sticky top-0 z-50 w-full px-4 pt-5">
       <nav className="mx-auto max-w-6xl rounded-full border border-zinc-200 bg-white/80 shadow-sm backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/80">
-        <div className="flex h-16 items-center justify-between px-6 lg:px-10">
+        <div className="flex h-16 items-center justify-between px-3 lg:px-4">
           <Link href="/" className="flex shrink-0 items-center gap-2.5">
             <Image
               src="/images/logo.png"
